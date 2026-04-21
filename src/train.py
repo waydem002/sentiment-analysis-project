@@ -4,7 +4,6 @@ from sklearn.pipeline import Pipeline, make_pipeline
 from sklearn.model_selection import train_test_split
 from joblib import dump
 import pandas as pd
-import argparse
 import os
 def load_and_validate_data(data_path: str) -> pd.DataFrame:
     """
@@ -16,12 +15,8 @@ def load_and_validate_data(data_path: str) -> pd.DataFrame:
     return df
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data", default="data/sentiments.csv")
-    parser.add_argument("--out", default="models/sentiment.joblib")
-
-    args: argparse.Namespace = parser.parse_args()
-    main(data_path=args.data, model_path=args.out)
+    df = load_and_validate_data("sentiments.csv")
+    print(df.head())
 
 def split_data(
     df: pd.DataFrame,
@@ -74,5 +69,3 @@ def main(data_path: str, model_path: str) -> None:
     print(f"Test accuracy: {acc:.3f}")
 
     save_model(clf, model_path)    
-
-    #
