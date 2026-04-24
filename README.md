@@ -21,3 +21,4 @@ python src/predict.py "I absolutely loved it" "That was awful"
 # Example:
 # 1    0.982    I absolutely loved it
 # 0    0.015    That was awful
+
