@@ -35,5 +35,4 @@ jobs:
 
       - name: Run the formatter script
         run: |
-          python src/formatter.py --input data/raw_sales_data.csv --output data/cleaned_sales_data.csv
-          
+          python src/formatter.py --input data/sentiments.csv --output data/cleaned_sentiments.csv
