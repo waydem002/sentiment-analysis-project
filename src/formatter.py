@@ -27,7 +27,7 @@ stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 
-def clean_text(text: str) -> str:
+#def clean_text(text: str) -> str:
     if not isinstance(text, str):
         return ""
     
