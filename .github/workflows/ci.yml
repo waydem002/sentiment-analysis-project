@@ -31,7 +31,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip 
-          pip install -r sentiment-analysis-project/requirements.txt pip install nltk
+          pip install -r sentiment-analysis-project/requirements.txt 
+          pip install nltk
+
+      - name: Download NLTK data
+        run: |
+         python -c "import nltk; nltk.download('stopwords', quiet=True); nltk.download('wordnet', quiet=True)"
+    
 
       - name: Run the formatter script
         run: |
