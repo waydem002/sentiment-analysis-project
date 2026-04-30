@@ -50,4 +50,4 @@ jobs:
 
       - name: Run predict script on sample text
         run: |
-          python src/predict.py --model models/sentiment.joblib\"I love this product!" "This is terrible"  
+          python src/predict.py --model models/sentiment.joblib "I love this product!" "This is terrible"  
