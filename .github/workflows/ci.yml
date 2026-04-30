@@ -47,3 +47,7 @@ jobs:
       - name: Run the formatter script
         run: |
           python src/formatter.py --input data/sentiments.csv --output data/cleaned_sentiments.csv
+
+      - name: Run predict script on sample text
+        run: |
+          python src/predict.py --model models/sentiment.joblib --text "I love this product!"    
